@@ -1,0 +1,19 @@
+package com.jms.application;
+
+
+	@SpringBootApplication
+	@ComponentScan(basePackages = {"com.transport.controller", "com.transport.application", "com.transport.service", "com.transport.helper"})
+
+public class JMSApplication extends SpringBootServletInitializer {
+		
+		@Override
+		protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+			return application.sources(TransportApplication.class);
+		}
+
+		public static void main(String[] args) throws Exception {
+			SpringApplication.run(TransportApplication.class, args);
+		}
+	}
+
+

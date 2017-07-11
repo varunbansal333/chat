@@ -1,0 +1,16 @@
+package com.jms.application;
+
+@SpringBootApplication
+@ComponentScan(basePackages = {})
+
+public class JMSApplication extends SpringBootServletInitializer {
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(JMSApplication.class);
+	}
+
+	public static void main(String[] args) throws Exception {
+		SpringApplication.run(JMSApplication.class, args);
+	}
+}

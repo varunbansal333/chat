@@ -1,0 +1,20 @@
+apply plugin: "java"
+apply plugin: "war"
+
+
+group = "JMSApplication"
+version = 1.0
+
+repositories {
+    mavenCentral()
+    maven { url "https://repository.jboss.org/nexus/content/repositories/releases" }
+}
+
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.5.+")
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2.2'
+    compile 'org.apache.httpcomponents:httpclient:4.5.+'
+    compile group: 'javax.persistence', name: 'persistence-api', version: '1.0.+'
+   
+}
